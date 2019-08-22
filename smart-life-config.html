@@ -1,0 +1,53 @@
+<script type="text/javascript">
+    RED.nodes.registerType('smart-life-config', {
+        category: 'config',
+        defaults: {
+            country: { value: "1", required: true, validate: RED.validators.number},
+            region: { value: "us", required: true, validate: x => ['us', 'eu', 'ay', 'az'].indexOf(x) > -1 },
+            app: { value: "smart_life", required: true, validate: x => ['smart_life', 'tuya'].indexOf(x) > -1 },
+        },
+        label: function () {
+            return this.host + ":" + this.port;
+        },
+        credentials: {
+            username: { type: "text" },
+            password: { type: "password" }
+        },
+    });
+</script>
+
+<script type="text/x-red" data-template-name="smart-life-config
+
+    <div class="form-row">
+        <label for="node-input-username"><i class="icon-tag"></i> Username</label>
+        <input type="text" id="node-input-username">
+    </div>
+    <div class=" form-row">
+        <label for="node-config-input-name"><i class="icon-bookmark"></i> Namw</label>
+        <input type="text" id="node-config-input-name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-password"><i class="icon-tag"></i> Password</label>
+        <input type="password" id="node-input-password">
+    </div>
+    <div class="form-row">
+        <label for="node-input-region"><i class="icon-globe"></i> Region</label>
+        <select id="node-input-region">
+            <option value="us">United States</option>
+            <option value="az">Americas</option>
+            <option value="ay">Asia</option>
+            <option value="eu">Europe</option>
+        </input>
+    </div>
+    <div class="form-row">
+        <label for="node-input-app"><i class="icon-globe"></i> App Type</label>
+        <select id="node-input-app">
+            <option value="smart_life">Smart Life</option>
+            <option value="tuya">Tuya</option>
+        </input>
+    </div>
+    <div class=" form-row">
+        <label for="node-config-input-country"><i class="icon-telephone"></i> Country Code</label>
+        <input type="number" id="node-config-input-country">
+    </div>
+</script>

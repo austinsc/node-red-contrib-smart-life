@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git remote add origin https://github.com/austinsc/node-red-contrib-smart-life.git"
+    "url": "https://github.com/austinsc/node-red-contrib-smart-life.git"
   },
   "keywords": [
     "node-red",
@@ -16,5 +16,10 @@
     "smart-life"
   ],
   "author": "Stephen C. Austin",
-  "license": "MIT"
+  "license": "MIT",
+  "node-red" : {
+    "nodes": {
+        "smart-life-config": "smart-life-config.js"
+    }
+}
 }
