@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-smart-life",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,9 +17,9 @@
   ],
   "author": "Stephen C. Austin",
   "license": "MIT",
-  "node-red" : {
+  "node-red": {
     "nodes": {
-        "smart-life-config": "smart-life-config.js"
+      "smart-life-config": "smart-life-config.js"
     }
-}
+  }
 }
